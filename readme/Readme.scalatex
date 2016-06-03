@@ -491,9 +491,10 @@
          Performance is still a work in progress and will hopefully
          continue to improve in future releases. Help here is appreciated.
 
-     @sect{code formatters creates unnecessary diffs!}
-       I understand a code formatter like scalafmt may add extra diffs in pull
-       requests. I still believe it's worth it, considering
+     @sect{Code formatters create unnecessary diffs!}
+       That's not a question, but I agree that code formatters like scalafmt do
+       sometimes increase the size of diffs in pull requests.
+       I still believe it's worth it, considering
 
        @ol
          @li
