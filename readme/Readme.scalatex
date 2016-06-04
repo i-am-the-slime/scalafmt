@@ -455,13 +455,13 @@
 
        @ul
          @li
-           Scalariform does not support enforcing column-width limits, which
+           Scalariform does not have a @code{--maxColumn} setting, which
            I personally like and is present in many popular coding styles.
          @li
-           In my experience, Scalariform gives makes it easy to write sloppy
-           looking code after a few rounds of refactoring. Scalafmt is
-           more opinionated, and takes a lot more liberty to add/remove
-           newlines.
+           Scalariform respects all line breaking decisions, leaving it up to
+           you (or even worse, your colleagues) to choose a formatting layout.
+           Scalafmt is opinionated and takes liberty to add/remove
+           newlines. Code should look consistent.
          @li
            Scalariform cannot format @lnk("Dotty", "https://github.com/lampepfl/dotty") code,
            which has minor syntactic differences to Scala. Being built with scala.meta,
@@ -502,6 +502,9 @@
          @li
            you can enable non-whitespace diffs during code review. For Github,
            add @code("?w=1") to the URL and ignore whitespace changes.
+         @li
+           @code{git-blame -w} will ignore whitespace changes so you can still
+           blame your colleagues if you reformat your whole codebase.
          @li
            code is read more often outside of pull requests, for example
            when you are coding.
